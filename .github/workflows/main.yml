@@ -1,0 +1,1 @@
+echo ${{ env.DOCKER_USERNAME }}
