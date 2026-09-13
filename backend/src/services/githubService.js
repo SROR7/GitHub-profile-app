@@ -15,21 +15,11 @@ if (process.env.GITHUB_TOKEN) {
     `Bearer ${process.env.GITHUB_TOKEN}`;
 }
 
-
-// =========================
-// Get GitHub User
-// =========================
-
 async function getGithubUser(username) {
   const response = await githubApi.get(`/users/${username}`);
 
   return response.data;
 }
-
-
-// =========================
-// Get Repositories
-// =========================
 
 async function getGithubRepos(username, page = 1, perPage = 10) {
   const response = await githubApi.get(
@@ -45,11 +35,6 @@ async function getGithubRepos(username, page = 1, perPage = 10) {
 
   return response.data;
 }
-
-
-// =========================
-// Get Followers
-// =========================
 
 async function getGithubFollowers(
   username,
@@ -69,11 +54,6 @@ async function getGithubFollowers(
   return response.data;
 }
 
-
-// =========================
-// Get Following
-// =========================
-
 async function getGithubFollowing(
   username,
   page = 1,
@@ -91,11 +71,6 @@ async function getGithubFollowing(
 
   return response.data;
 }
-
-
-// =========================
-// Get Stats
-// =========================
 
 async function getGithubStats(username) {
   const user = await getGithubUser(username);

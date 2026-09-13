@@ -6,3 +6,10 @@ node_modules/
 dist/
 .vite/
 *.log
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json

@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: GitDev
+  namespace: argocd
+
+spec:
+
+  project: default
+
+  source:
+    repoURL: https://github.com/SROR7/GitHub-profile-app.git
+    targetRevision: main
+    path: K8S
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: gitdev
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: truec
