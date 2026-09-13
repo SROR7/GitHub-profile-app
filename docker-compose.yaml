@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: gitdev-backend
+
+    ports:
+      - "3000:3000"
+
+    env_file:
+      - .env
+
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: Gitdev-frontend
+
+    ports:
+      - "8080:80"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
