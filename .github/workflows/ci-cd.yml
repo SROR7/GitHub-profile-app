@@ -12,9 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-        steps:
       - name: Analyze with SonarQube
-
         uses: SonarSource/sonarqube-scan-action@7295e71c9583053f5bf40e9d4068a0c974603ec8
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}  
