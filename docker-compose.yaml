@@ -9,16 +9,19 @@ services:
       - "3000:3000"
 
     env_file:
-      - .env
+      - ./backend/.env
 
     restart: unless-stopped
 
   frontend:
-    build: ./frontend
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+
     container_name: Gitdev-frontend
 
     ports:
-      - "8080:80"
+      - "5173:5173"
 
     depends_on:
       - backend
