@@ -15,7 +15,7 @@ jobs:
       - name: Check Docker secrets
         run: |
           if [ -z "${{ secrets.DOCKER_USERNAME }}" ]; then
-            echo "DOCKER_USERNAME is  EMPTY
+            echo "DOCKER_USERNAME is  EMPTY"
             exit 1
           fi
 
