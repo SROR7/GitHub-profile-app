@@ -5,19 +5,37 @@ module "eks" {
   name               = "gitdev-cluster"
   kubernetes_version = "1.33"
 
-  # Optional
   endpoint_public_access = true
 
-  # Optional: Adds the current caller identity as an administrator via cluster access entry
   enable_cluster_creator_admin_permissions = true
-
-  compute_config = {
-    enabled    = true
-    node_pools = ["general-purpose"]
-  }
 
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
+
+  eks_managed_node_groups = {
+    gitdev_nodes = {
+      name = "gitdev-nodes"
+
+      instance_types = ["t3.medium"]
+
+      capacity_type = "ON_DEMAND"
+
+      min_size     = 1
+      max_size     = 2
+      desired_size = 1
+
+      subnet_ids = module.vpc.private_subnets
+
+      labels = {
+        role        = "worker"
+        environment = "dev"
+      }
+
+      tags = {
+        Project = "gitdev"
+      }
+    }
+  }
 
   tags = {
     Environment = "dev"
