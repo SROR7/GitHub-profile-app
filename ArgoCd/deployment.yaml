@@ -3,7 +3,7 @@ kind: Application
 
 metadata:
   name: gitdev-app-argocd
-  namespace: gitdev-app
+  namespace: argocd
 
 spec:
 

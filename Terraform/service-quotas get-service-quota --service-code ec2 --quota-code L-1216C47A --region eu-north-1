@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------------------
+|                                    ListServiceQuotas                                    |
++--------------------------------------------------------------------+------+-------------+
+|  [1m[34mRunning On-Demand P instances[0m                                     |  [1m[34m0.0[0m |  [1m[34mL-417A185B[0m |
+|  [1m[34mRunning On-Demand X instances[0m                                     |  [1m[34m0.0[0m |  [1m[34mL-7295265B[0m |
+|  [1m[34mRunning On-Demand DL instances[0m                                    |  [1m[34m0.0[0m |  [1m[34mL-6E869C2A[0m |
+|  [1m[34mRunning On-Demand G and VT instances[0m                              |  [1m[34m0.0[0m |  [1m[34mL-DB2E81BA[0m |
+|  [1m[34mRunning On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances[0m  |  [1m[34m1.0[0m |  [1m[34mL-1216C47A[0m |
+|  [1m[34mRunning On-Demand High Memory instances[0m                           |  [1m[34m0.0[0m |  [1m[34mL-43DA4232[0m |
+|  [1m[34mRunning On-Demand F instances[0m                                     |  [1m[34m0.0[0m |  [1m[34mL-74FC7D96[0m |
+|  [1m[34mRunning On-Demand Inf instances[0m                                   |  [1m[34m0.0[0m |  [1m[34mL-1945791B[0m |
+|  [1m[34mRunning On-Demand HPC instances[0m                                   |  [1m[34m0.0[0m |  [1m[34mL-F7808C92[0m |
+|  [1m[34mRunning On-Demand Trn instances[0m                                   |  [1m[34m0.0[0m |  [1m[34mL-2C3B7624[0m |
++--------------------------------------------------------------------+------+-------------+
