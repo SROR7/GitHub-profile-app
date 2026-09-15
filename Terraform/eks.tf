@@ -12,6 +12,15 @@ module "eks" {
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
+  addons = {
+    coredns                = {}
+    kube-proxy             = {}
+    vpc-cni                = {
+       before_compute = true 
+    }
+    eks-pod-identity-agent = {}
+  }
+
   eks_managed_node_groups = {
     gitdev_nodes = {
       name = "gitdev-nodes"
@@ -25,13 +34,6 @@ module "eks" {
       desired_size = 1
 
       subnet_ids = module.vpc.private_subnets
-
-      addons = {
-        coredns                = {}
-        kube-proxy             = {}
-        vpc-cni                = {}
-        eks-pod-identity-agent = {}
-      }
 
       labels = {
         role        = "worker"
