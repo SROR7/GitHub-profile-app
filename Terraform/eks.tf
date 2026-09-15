@@ -26,6 +26,13 @@ module "eks" {
 
       subnet_ids = module.vpc.private_subnets
 
+      addons = {
+        coredns                = {}
+        kube-proxy             = {}
+        vpc-cni                = {}
+        eks-pod-identity-agent = {}
+      }
+
       labels = {
         role        = "worker"
         environment = "dev"
