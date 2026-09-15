@@ -16,7 +16,7 @@ module "eks" {
     gitdev_nodes = {
       name = "gitdev-nodes"
 
-      instance_types = ["t3.small"]
+      instance_types = ["t3.medium"]
 
       capacity_type = "ON_DEMAND"
 
